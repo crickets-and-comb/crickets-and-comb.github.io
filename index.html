@@ -1,1 +1,118 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crickets and Comb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background-color: #f8f9fa;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Crickets and Comb</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="container">
+        <h1 class="display-4">[Your Slogan Here]</h1>
+        <p class="lead">Welcome to Crickets and Comb, an open-source collective dedicated to practical tools for nonprofits and good causes.</p>
+        <a href="#projects" class="btn btn-primary btn-lg mt-3">Explore Our Projects</a>
+    </div>
+</section>
+
+<section id="about" class="py-5">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>We’re Crickets and Comb &mdash; a team that builds custom open-source tools for nonprofits, and makes sure the folks using them feel supported every step of the way. We care about clarity, ease of use, real-world impact &mdash; and keeping things secure, maintained, and steadily improving.</p>
+        <p>When we build something useful, we share it. Many of our tools grow into resources for the wider open-source community. We stay grounded in collaboration and mentorship, working with people near and far to learn, teach, and create together. It takes care and commitment to keep things running well, and we’re here for the long haul.</p>
+    </div>
+</section>
+
+<section id="projects" class="py-5 bg-light">
+    <div class="container">
+        <h2>Our Projects</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">bfb_delivery</h5>
+                        <p class="card-text">A Python package designed to streamline delivery route planning for the Bellingham Food Bank. Provides ETL interface with third-party routing service and creates printable manifests. Saves several paid staff hours per week and avoids human error.</p>
+                        <a href="https://github.com/crickets-and-comb/bfb_delivery" class="btn btn-outline-primary" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">comb_utils</h5>
+                        <p class="card-text">A collection of utility functions and tools for common tasks in Python development, designed for reuse across Crickets and Comb projects and beyond.</p>
+                        <a href="https://github.com/crickets-and-comb/comb_utils" class="btn btn-outline-primary" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+        <h2>What People Are Saying</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote p-4 bg-white border rounded shadow-sm h-100">
+                    <p class="mb-3">“Crickets and Comb provided exactly the tools we needed, and they took the time to make sure we knew how to use them. It made a real difference.”</p>
+                    <footer class="blockquote-footer">Fake Testifier</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote p-4 bg-white border rounded shadow-sm h-100">
+                    <p class="mb-3">“Collaborating with Crickets and Comb helped our team grow. We learned, we built, and we delivered more than we thought possible.”</p>
+                    <footer class="blockquote-footer">Another Fake Testifier</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Have a question or want to collaborate? Reach out via <a href="https://github.com/crickets-and-comb" target="_blank">GitHub</a>.</p>
+    </div>
+</section>
+
+<footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 Crickets and Comb. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
