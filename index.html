@@ -25,6 +25,25 @@
             transform: scale(1.02);
             transition: transform 0.2s;
         }
+        .navbar-brand img {
+            max-height: 40px;
+            height: auto;
+            width: auto;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 15px;
+            }
+            .display-4 {
+                font-size: 2rem;
+            }
+            .lead {
+                font-size: 1rem;
+            }
+            .project-card:hover {
+                transform: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -32,9 +51,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-  <img src="images/logo.png" alt="Crickets and Comb Logo" height="40" class="me-2">
-  Crickets and Comb
-</a>
+      <img src="images/logo.png" alt="Crickets and Comb Logo" class="me-2">
+      Crickets and Comb
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
