@@ -150,17 +150,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // On small screens, close the expanded menu after a nav link is tapped so it
-    // doesn't cover the section heading the link scrolled to.
+    // On small screens, close the expanded menu after any in-page link is tapped
+    // (nav links, brand, hero button) so it doesn't cover the section scrolled to.
     (function () {
         const menu = document.getElementById('navbarNav');
         if (!menu || !window.bootstrap) return;
-        menu.querySelectorAll('.nav-link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                if (menu.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false }).hide();
-                }
-            });
+        let open = false;  // true while the menu is shown or opening
+        menu.addEventListener('show.bs.collapse', function () { open = true; });
+        menu.addEventListener('hide.bs.collapse', function () { open = false; });
+        document.addEventListener('click', function (event) {
+            if (!open || !event.target.closest('a[href^="#"]')) return;
+            const collapse = bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false });
+            if (menu.classList.contains('show')) {
+                collapse.hide();
+            } else {
+                // Still animating open; Bootstrap ignores hide() mid-transition.
+                menu.addEventListener('shown.bs.collapse', function () { collapse.hide(); }, { once: true });
+            }
         });
     })();
 </script>
